@@ -29,7 +29,7 @@ expenses.find({active: true}).limit(10, function(err, exps) {
 
 ## Install
 
-`npm install submongojs -g`
+`npm install submongojs`
 
 ## API
 
