@@ -1,6 +1,6 @@
 {
   "name": "submongojs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "sub-sections of mongodb databases with mongojs",
   "main": "index.js",
   "keywords": [
