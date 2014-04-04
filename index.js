@@ -11,7 +11,7 @@ var SubCollection = function(collection, id, subField) {
 };
 
 SubCollection.prototype.aggregate = function(pipeline) {
-  pipeline.$match = this._map(pipeline.$maptch || {});
+  pipeline.$match = this._map(pipeline.$match || {});
   return this.collection.aggregate.apply(this.collection, arguments);
 };
 
