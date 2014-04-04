@@ -38,7 +38,8 @@ SubCollection.prototype.drop = function() {
   return this.collection.drop.apply(this.collection, arguments);
 };
 
-SubCollection.prototype.dropIndex = function() {
+SubCollection.prototype.dropIndex = function(keys) {
+  keys[this.subField] = 1;
   return this.collection.dropIndex.apply(this.collection, arguments);
 };
 
