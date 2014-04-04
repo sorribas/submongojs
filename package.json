@@ -1,0 +1,16 @@
+{
+  "name": "submongojs",
+  "version": "0.0.0",
+  "description": "sub-sections of mongodb databases with mongojs",
+  "main": "index.js",
+  "devDependencies": {
+    "tape": "~2.12.2",
+    "mongojs": ">=0.11.0"
+  },
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": "git@github.com:sorribas/submongojs.git",
+  "author": "Eduardo Sorribas <eduardo@sorribas.org> (http://sorribas.org/)",
+  "license": "MIT"
+}
