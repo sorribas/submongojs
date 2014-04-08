@@ -2,6 +2,8 @@
 
 sub-sections of mongodb databases with [mongojs](https://github.com/mafintosh/mongojs)
 
+[![build status](https://secure.travis-ci.org/sorribas/submongojs.png)](http://travis-ci.org/sorribas/submongojs)
+
 ## What?
 
 Ok. So let's say you're building a personal finance app for many customers, two of which are Alice and Bob.
