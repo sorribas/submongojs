@@ -69,6 +69,24 @@ test('find should work', function(t) {
   });
 });
 
+test('find should work with cursors', function(t) {
+  t.plan(3);
+  fixtures.load(function() {
+    var beers = sub(db.beers, 'DO', 'country');
+    beers.find().sort({name: 1}, function(err, beers) {
+      t.equal(beers[0].name, 'Bohemia');
+    });
+
+    var beersDk = sub(db.beers, 'DK', 'country');
+    beersDk.find().skip(1, function(err, beers) {
+      t.equal(beers[0].name, 'Tuborg');
+      beersDk.find({type: 'Ale'}, function(err, ales) {
+        t.equal(ales[0].name, 'Ale no. 17');
+      });
+    });
+  });
+});
+
 test('findOne should work', function(t) {
   fixtures.load(function() {
     var beers = sub(db.beers, 'DO', 'country');

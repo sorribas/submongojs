@@ -53,6 +53,7 @@ SubCollection.prototype.ensureIndex = function() {
 
 SubCollection.prototype.find = function(query) {
   if (typeof query === 'function') return this.find(null, query);
+  if (!arguments.length) return this.find({});
   if (!query) query = {};
   this._map(query);
   return this.collection.find.apply(this.collection, arguments);
@@ -103,6 +104,7 @@ SubCollection.prototype.reIndex = function() {
 
 SubCollection.prototype.remove = function(query, justOne) {
   if (typeof query === 'function') return this.remove(null, query);
+  if (!arguments.length) return this.remove({});
   if (!query) query = {};
   this._map(query);
   return this.collection.remove.apply(this.collection, arguments);
